@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
-import { Play, SkipBack, SkipForward } from "lucide-react";
+import AudioPlayer from "@/components/AudioPlayer";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useForm } from "react-hook-form";
@@ -88,22 +88,7 @@ const Index = () => {
 
       {/* Footer Player */}
       <footer className="flex items-center justify-between p-4 border-t">
-        <div className="flex items-center">
-          <button className="mr-2">
-            <SkipBack className="w-5 h-5" />
-          </button>
-          <button className="mr-2">
-            <Play className="w-5 h-5" />
-          </button>
-          <button>
-            <SkipForward className="w-5 h-5" />
-          </button>
-        </div>
-        <div className="flex-grow mx-4">
-          <div className="w-full h-1 bg-muted rounded-full">
-            <div className="w-1/3 h-full bg-primary rounded-full"></div>
-          </div>
-        </div>
+        <AudioPlayer />
       </footer>
     </div>
   );
